@@ -9,5 +9,9 @@ public class DownArrow : MonoBehaviour {
     void Update()
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime);
+        if (gameObject.transform.position.y >= 6.5f)
+        {
+            Destroy(gameObject);
+        }
     }
 }

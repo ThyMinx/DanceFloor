@@ -9,5 +9,9 @@ public class LeftArrow : MonoBehaviour {
 	void Update () 
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
+        if (gameObject.transform.position.y >= 6.5f)
+        {
+            Destroy(gameObject);
+        }
 	}
 }
